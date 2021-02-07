@@ -1,0 +1,13 @@
+- if @japanese_user.errors.any?
+  - @japanese_user.errors.full_messages.each do |message|
+    ul
+      li= message
+= form_with model: @japanese_user, url: japanese_japanese_users_path, local: true do |f|
+  .form_group
+    = f.label :name
+    = f.text_field :name
+  .form_group
+    = f.label :age
+    = f.number_field :age
+  = f.submit '登録する'
+
