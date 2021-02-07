@@ -1,0 +1,3 @@
+class American < User
+
+end
