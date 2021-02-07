@@ -1,3 +1,7 @@
+- if @japanese_user.errors.any?
+  - @japanese_user.errors.full_messages.each do |message|
+    ul
+      li= message
 = form_with model: @japanese_user, url: japanese_japanese_users_path, local: true do |f|
   .form_group
     = f.label :name
