@@ -1,0 +1,12 @@
+.login-register-form
+  .login-register-form-inner
+    .card.nb-3.text-center
+      h3.mb-5.mt-5 Login
+      = form_with scope: :session, local: true do |f|
+        .form-group.ml-2.mr-2
+          = f.label :email
+          = f.email_field :email, class: 'form-control'
+        .form-group
+          = f.label :password
+          = f.password_field :password, class: 'form-control'
+        = f.submit 'ログインする', class: 'btn btn-raised btn-success'
