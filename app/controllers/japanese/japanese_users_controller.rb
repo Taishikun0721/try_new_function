@@ -13,6 +13,7 @@ class Japanese::JapaneseUsersController < ApplicationController
     if @japanese_user.save
       redirect_to root_path
     else
+      flash.now[:danger] = '登録に失敗しました'
       render :new
     end
   end
@@ -20,6 +21,6 @@ class Japanese::JapaneseUsersController < ApplicationController
   private
 
   def japanese_params
-    params.require(:japanese).permit(:name, :age)
+    params.require(:japanese).permit(:name, :age, :email, :password, :password_confirmation)
   end
 end
