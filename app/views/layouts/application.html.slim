@@ -11,4 +11,6 @@ html
   body
     .container
       = render 'shared/flash_messages'
+      = link_to 'ログアウト', logout_path, method: :delete
+      // rails-ujsがmethod: :delete部分を制御してくれて、aタグのdata_methodのところにつけてくれている
       = yield
