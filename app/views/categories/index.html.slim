@@ -4,6 +4,6 @@ ul
   - @categories.each do |category|
     li= link_to category.name, category
 
-button= link_to '日本人登録', new_japanese_japanese_user_path
-button= link_to 'アメリカ人登録', new_american_american_user_path
+= link_to '日本人登録', new_japanese_japanese_user_path, class: 'btn btn-raised btn-primary'
+= link_to 'アメリカ人登録', new_american_american_user_path, class: 'btn btn-raised btn-danger'
 

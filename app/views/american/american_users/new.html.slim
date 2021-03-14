@@ -1,9 +1,9 @@
-h1.mt-5 日本人登録
-- if @japanese_user.errors.any?
-  - @japanese_user.errors.full_messages.each do |message|
+h1.mt-5 アメリカ人登録
+- if @american_user.errors.any?
+  - @american_user.errors.full_messages.each do |message|
     ul
       li= message
-= form_with model: @japanese_user, url: japanese_japanese_users_path, local: true do |f|
+= form_with model: @american_user, url: american_american_users_path, local: true do |f|
   .form_group.mb-3
     = f.label :name
     = f.text_field :name, class: 'form-control'
